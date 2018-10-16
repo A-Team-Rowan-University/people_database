@@ -1,3 +1,13 @@
+// Table operations
+// create
+//  Take user without id, put into table, new id gets generated
+// read
+//  Take id and get user
+// update
+//  Take partially filled user with id and put into database, overriding filled in fields
+// delete
+//  Take id and remove from database
+//
 
 /**
  *
@@ -11,11 +21,8 @@
  *
  */
 
-pub trait Table {
-    type Key;
-    type Value;
-
-    fn lookup(&self, key: Self::Key) -> Self::Value;
+pub trait Table<V> {
+    fn lookup(&self, key: K) -> V;
 }
 
 /**
@@ -35,5 +42,14 @@ pub trait JoinTable {
 
     fn lookup_a(&self, key: Self::KeyA) -> Self::KeyB;
     fn lookup_b(&self, key: Self::KeyB) -> Self::KeyA;
+}
+
+/**
+ * A table used for testing
+ * It does not actually store anything anywhere
+ */
+
+pub struct TestTable<V> {
+
 }
 
