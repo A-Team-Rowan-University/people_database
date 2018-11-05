@@ -4,7 +4,7 @@ const mysql = require("mysql");
 const conn = mysql.createPool({
   host: "localhost",
   user: "root",
-  password: "****", // change this password
+  password: "bdkqwxz2", // change this password
   database: "mario"
 })
 
@@ -55,7 +55,7 @@ people.read = async function(req, res) {
       fname LIKE "${search}%" OR
       lname LIKE "${search}%" OR
       email LIKE "${search}%" OR
-      banner_id LIKE "%${search}%"
+      banner_id LIKE "${search}%"
     LIMIT 10
     `;
 
