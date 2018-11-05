@@ -46,7 +46,7 @@ people.create = async function(req, res) {
 }
 
 people.read = async function(req, res) {
-  const search = req.body.search;
+  const search = req.body.search.replace('%', '\\%').replace('_','\\_');
   const sql =
     `
     SELECT person_id, fname, lname, email, banner_id
