@@ -1,0 +1,73 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script async defer src="././js/users.js"></script>
+</head>
+
+<body>
+
+  <!-- Modal -->
+  <div class="modal fade" id="new-person-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create Person</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="new-person-form">
+            <div class="form-group">
+              <label for="new-fname">First Name:</label>
+              <input type="text" class="form-control" id="new-fname">
+            </div>
+            <div class="form-group">
+              <label for="new-fname">Last Name:</label>
+              <input type="text" class="form-control" id="new-lname">
+            </div>
+            <div class="form-group">
+              <label for="new-fname">Email:</label>
+              <input type="text" class="form-control" id="new-email">
+            </div>
+            <div class="form-group">
+              <label for="new-banner-id">Banner Id:</label>
+              <input type="number" maxlength="9" class="form-control" id="new-banner-id">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="createPerson()">Create User</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#new-person-modal">
+        Create User
+      </button>
+
+      <div class="form-group">
+        <label for="person-input">Name:</label>
+        <input type="text" class="form-control" id="person-input" onkeyup="readPeople(this.value)">
+      </div>
+      <div id="people-list">
+        <div class="list-group">
+          <a href="#" id="person-1" class="list-group-item">
+            <h4 class="list-group-item-heading">
+              First List Group Item Heading</h4>
+            <p class="list-group-item-text">List Group Item Text</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+</body>
