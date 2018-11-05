@@ -37,12 +37,6 @@ async function readPeople(search) {
     </div>
     `);
   });
-
-  $(".person-item").each(function(this){
-    $(this).click(function(e){
-        
-    })
-  })
 }
 
 async function updatePerson(user) {
