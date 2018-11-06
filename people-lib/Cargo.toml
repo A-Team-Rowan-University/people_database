@@ -4,3 +4,4 @@ version = "0.1.0"
 authors = ["Tim <timothyhollabaugh@gmail.com>"]
 
 [dependencies]
+database_lib = { git = https://github.com/Rowan-ECE-Resource-Center/database_lib}
