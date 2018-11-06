@@ -10,4 +10,6 @@ pub struct User {
     banner_id: [u8; 9],
 }
 
-
+impl User {
+    
+}
