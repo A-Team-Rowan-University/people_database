@@ -6,8 +6,6 @@ use rouille::Response;
 
 fn main() {
     rouille::start_server("localhost:8000", move |request| {
-        //data base connection
-
         handler(request)
     });
 }
@@ -15,21 +13,19 @@ fn main() {
 fn handler(request: &Request) -> Response {
     router!(request,
             (POST) ["/api/v1/users"] => {
-                //my sql code
-                Response::text("if your seeing this nothing was begin done with your data")
+                Response::text("501: Not implemented").with_status_code(501)
             },
             (GET) ["/api/v1/users"] => {
-                //my sql code
-                Response::text("if your seeing this nothing was begin done with your data")
+                Response::text("501: Not implemented").with_status_code(501)
             },
             (PUT) ["/api/v1/users"] => {
-                //my sql code
-                Response::text("if your seeing this nothing was begin done with your data")
+                Response::text("501: Not implemented").with_status_code(501)
             },
             (DELETE) ["/api/v1/users"] => {
-                // my sql code
-                Response::text("if your seeing this nothing was begin done with your data")
+                Response::text("501: Not implemented").with_status_code(501)
             },
-            _ => {Response::text("if your seeing this nothing was begin done with your data")}
+            _ => {
+                Response::text("404: Not found").with_status_code(404)
+            }
            )
 }
