@@ -14,19 +14,19 @@ fn main() {
 
 fn handler(request: &Request) -> Response {
     router!(request,
-            (CREATE) ["user/create"] => {
+            (POST) ["/api/v1/users"] => {
                 //my sql code
                 Response::text("if your seeing this nothing was begin done with your data")
             },
-            (READ) ["/user/read"] => {
+            (GET) ["/api/v1/users"] => {
                 //my sql code
                 Response::text("if your seeing this nothing was begin done with your data")
             },
-            (UPDATE) ["/user/update"] => {
+            (PUT) ["/api/v1/users"] => {
                 //my sql code
                 Response::text("if your seeing this nothing was begin done with your data")
             },
-            (DELETE) ["user/delete"] => {
+            (DELETE) ["/api/v1/users"] => {
                 // my sql code
                 Response::text("if your seeing this nothing was begin done with your data")
             },
