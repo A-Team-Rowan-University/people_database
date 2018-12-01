@@ -1,5 +1,2 @@
-
-mod table;
+extern crate database_lib;
 mod user;
-mod database;
-
