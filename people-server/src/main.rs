@@ -5,7 +5,7 @@ use rouille::Request;
 use rouille::Response;
 
 fn main() {
-    rouille::start_server("localhost:8000", move |request| {
+    rouille::start_server("0.0.0.0:8080", move |request| {
         handler(request)
     });
 }
