@@ -6,3 +6,5 @@ authors = ["Tim <timothyhollabaugh@gmail.com>"]
 [dependencies]
 rouille = "2.2.0"
 serde = "1.0.80"
+people-lib = { path = "../people-lib" }
+database-lib = { path = "../../database-lib" }
